@@ -1,0 +1,24 @@
+.corpo_total {
+    width: 100vw;
+    height: 100vh;
+    background: #3c544a;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center
+}
+
+body {
+    margin: 0px;
+}
+
+.mensagem {
+    text-align: center;
+    width: 300px;
+    margin: 0 auto;
+    background-color: white;
+}
+
+.w3-container.w3-teal {
+    height: 10px;
+}

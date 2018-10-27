@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="styles/w3school.css">
+	<link rel="stylesheet" type="text/css" href="styles/cadastroCurso.css">
+	<title>Cadastro de Curso</title>
+</head>
+<body>
+	<div class="corpo_total">
+		<div class="form">
+			<div class="w3-container w3-teal">
+				<h2><b>Dados do Curso</b></h2>
+			</div>
+			<form class="w3-container" action="scripts/php/gravarCurso.php" accept-charset="utf-8" name="formulario" id="formulario" method="POST">
+				<div>
+					<p><input class="w3-input w3-border w3-white" name="nome" type="text" placeholder="Nome:" required></p>
+				</div>
+				<div>
+					<p><textarea rows="4" cols="40" class="w3-input w3-border w3-white" name="descricao" placeholder="Descrição:" required></textarea></p>
+				</div>
+				<div class="s">
+					<input type="submit" name="cadastrar" value="Cadastrar" class="w3-btn w3-teal">
+				</div>
+			</form>
+		</div>
+	</div>
+
+</body>
+</html>

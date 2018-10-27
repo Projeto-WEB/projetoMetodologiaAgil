@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="styles/w3school.css">
+	<link rel="stylesheet" type="text/css" href="styles/cadastroUsuario.css">
+	<script src="scripts/javascript/cadastroUsuario.js"></script>
+	<title>Cadastro de Usuário</title>
+</head>
+<body onload="esconderCamposDeficiencia();">
+	<div class="corpo_total">
+		<div class="form">
+			<div class="w3-container w3-teal">
+				<h2><b>Dados Pessoais</b></h2>
+			</div>
+			<form class="w3-container" accept-charset="utf-8" action="scripts/php/gravarAluno.php" name="formulario" id="formulario" method="POST">
+				<div>
+					<p><input class="w3-input w3-border w3-white" name="nome" type="text" placeholder="Nome:" required></p>
+				</div>
+				<div>
+					<p><input class="w3-input w3-border w3-white" placeholder="CPF:" id="cpf" name="cpf" size="12" maxlength="11" type="text" onKeyUp="nu(this)" onblur="VerificaCPF();" required></p>
+				</div>
+				<div>
+					<p><input class="w3-input w3-border w3-white" placeholder="RG:" name="rg" id="rg" type="text" onKeyUp="nu(this)" onblur="ValRG();" required></p>
+				</div>
+				<div>
+					<p><input class="w3-input w3-border w3-white" name="endereco" type="text" placeholder="Endereço:" required></p>
+				</div>
+				<div>
+					<p><input class="w3-input w3-border w3-white" placeholder="Telefone:" name="telefone" type="telefone" onKeyUp="nu(this)" required></p>
+				</div>
+				<div>
+					<label class="w3-text-teal"><b>Sexo</b></label>
+					<p>
+						<input class="w3-radio" type="radio" name="sexo" id="masculino" value="Masculino">
+						<label>Masculino</label></p>
+					<p>
+						<input class="w3-radio" type="radio" name="sexo" id="feminino" value="Feminino">
+						<label>Feminino</label></p>
+					<p>
+						<input class="w3-radio" type="radio" name="sexo" id="naodeclarar" value="Naodeclarar">
+						<label>Prefiro não declarar</label></p>
+				</div>
+				<div>
+					<p>
+						<label class="w3-text-teal"><b>Cor da pele:</b></label>
+						<p>
+							<input class="w3-radio" type="radio" name="corpele" value="branco">
+							<label>Branco</label></p>
+						<p>
+							<input class="w3-radio" type="radio" name="corpele" value="pardo">
+							<label>Pardo</label></p>
+						<p>
+							<input class="w3-radio" type="radio" name="corpele" value="negro">
+							<label>Negro</label></p>
+						<p>
+							<input class="w3-radio" type="radio" name="corpele" value="amarela">
+							<label>Amarela</label></p>
+						<p>
+							<input class="w3-radio" type="radio" name="corpele" value="indigena">
+							<label>Indigena</label></p>
+				</div>
+				<div>
+					<p>
+						<label class="w3-text-teal"><b>Data de Nascimento:</b></label>
+						<input class="w3-input w3-border w3-white" name="nasc" type="date" required=""></p>
+				</div>
+				<div>
+					<label class="w3-text-teal"><b>Renda mensal:</b></label>
+					<p>
+						<input class="w3-radio" type="radio" name="renda" value="Menor que R$954,00">
+						<label>Menor que 1 salário mínimo</label></p>
+					<p>
+						<input class="w3-radio" type="radio" name="renda" value="De R$954,00 até R$1908,00">
+						<label>De 1 à 2 salários mínimos</label></p>
+					<p>
+						<input class="w3-radio" type="radio" name="renda" value="De R$1908,00 até R$2862,00">
+						<label>De 2 à 3 salários mínimos</label></p>
+					<p>
+						<input class="w3-radio" type="radio" name="renda" value="De R$R$2862,00 até R$3816,00">
+						<label>De 3 à 4 salários mínimos</label></p>
+					<p>
+						<input class="w3-radio" type="radio" name="renda" value="Maior que R$3816,00">
+						<label>Maior que 4 salários mínimos</label></p>
+				</div>
+				<div>
+					<label class="w3-text-teal"><b>Possui alguma deficiência?</b></label>
+					<p>
+						<input class="w3-radio" type="radio" name="deficiente" id="sim" value="Sim" onclick="mostrarCamposDeficiencia();">
+						<label>Sim</label></p>
+					<p>
+						<input class="w3-radio" type="radio" name="deficiente" id="nao" value="Não" onclick="esconderCamposDeficiencia();">
+						<label>Não</label></p>
+				</div>
+				<div>
+					<p>
+						<label class="w3-text-teal" id="lb-cid" name="lb-cid" ><b>CID:</b></label>
+						<input class="w3-input w3-border w3-white" name="cid" id="cid" type="text"></p>
+				</div>
+				<div>
+					<label class="w3-text-teal"><b>Relação com o IFSP:</b></label>
+					<p>
+						<input class="w3-radio" type="radio" name="gender" value="superior">
+						<label>Estudante do curso superior</label></p>
+					<p>
+						<input class="w3-radio" type="radio" name="gender" value="tecnico-integral">
+						<label>Estudante do curso técnico integral</label></p>
+					<p>
+						<input class="w3-radio" type="radio" name="gender" value="tecnico-concomitante">
+						<label>Integramte do curso técnico concomitante/subsequênte</label></p>
+					<p>
+						<input class="w3-radio" type="radio" name="gender" value="servidor">
+						<label>Servidor lotado no câmpus</label></p>
+					<p>
+						<input class="w3-radio" type="radio" name="gender" value="externa">
+						<label>Comunidade externa</label></p>
+				</div>
+				<div class="w3-container w3-teal">
+					<h2><b>Credenciais</b></h2>
+				</div>
+				<div class="credencias">
+					<p><input class="w3-input w3-border w3-white" type="text" id="email" name="email" placeholder="E-mail: " onblur="validarEmail(formulario.email);"required></p>
+                    <p><input class="w3-input w3-border w3-white" type="password" name="senha" placeholder="Senha: " required></p>
+				</div>
+				<div class="s">
+					<input type="submit" name="cadastrar" value="Cadastrar" class="w3-btn w3-teal">
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

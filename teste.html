@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="styles/w3school.css">
+	<link rel="stylesheet" type="text/css" href="styles/cadastroTurma.css">
+	<title>Cadastro Turma</title>
+</head>
+<body>
+	<div class="corpo_total">
+		<div class="form">
+			<div class="w3-container w3-teal">
+				<h2><b>Dados da Turma</b></h2>
+			</div>
+			<form class="w3-container w3-card-4" accept-charset="utf-8" action="scripts/php/gravarTurma.php" name="formulario" id="formulario" method="POST">
+				<div>
+					<p><select class="w3-select w3-border" name="curso">
+    					<option value="" disabled selected>Selecione um Curso</option>
+  					</select></p>
+  				</div>
+  				<div>
+					<p><select class="w3-select w3-border" name="professor">
+    					<option value="" disabled selected>Selecione um Professor</option>
+  					</select></p>
+  				</div>
+  				<div>
+					<p><select class="w3-select w3-border" name="semestre">
+    					<option value="" disabled selected>Selecione um Semestre</option>
+  					</select></p>
+  				</div>
+  				<div>
+					<p><input class="w3-input w3-border w3-white" name="numero_vagas" type="number" placeholder="Numero de Vagas:" required></p>
+				</div>
+				<div>
+					<p><input class="w3-input w3-border w3-white" name="numero_cotas" type="number" placeholder="Numero de Vagas por Cota:" required></p>
+				</div>
+				<div class="s">
+					<input type="submit" name="cadastrar" value="Cadastrar" class="w3-btn w3-teal">
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

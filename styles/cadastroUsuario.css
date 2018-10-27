@@ -1,0 +1,41 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+
+.corpo_total {
+    background: #3c544a;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center
+}
+
+.form {
+    padding: 0;
+    margin: 0 auto;
+    background-color: white;
+}
+
+body {
+    margin: 0px;
+}
+
+.s {
+    text-align: center;
+}
+
+.w3-btn.w3-teal {
+    width: 260px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.w3-container.w3-teal {
+    text-align: center;
+}
+
+.credencias {
+    margin-top: 10px;
+}

@@ -1,0 +1,47 @@
+.corpo_total {
+    width: 100vw;
+    height: 100vh;
+    background: #3c544a;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center
+}
+
+.form {
+    width: 300px;
+    margin: 0 auto;
+    background-color: white;
+}
+
+body {
+    margin: 0px;
+}
+
+.submit {
+    padding-top: 10px;
+}
+
+.inputs {
+    width: 260px;
+}
+
+.w3-btn.w3-teal {
+    width: 260px;
+}
+
+.registro {
+    text-align: center;
+}
+
+a {
+    color:#00008B;
+}
+
+.w3-container.w3-teal {
+    height: 10px;
+}
+
+.form_title {
+    text-align: center;
+}

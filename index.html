@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="styles/w3school.css">
+    <link rel="stylesheet" type="text/css" href="styles/index.css">
+    <script src="scripts/javascript/index.js"></script>
+    <script src="scripts/javascript/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+    <div class="corpo_total">
+        <div class="form">
+            <div class="w3-container w3-teal"></div>
+            <form class="w3-container" accept-charset="utf-8" name="formulario" method="POST" action="scripts/php/login.php">
+                <div class="form_title">
+                    <p><h2><b>Login</b></h2></p>
+                </div>
+                <div class="inputs">
+                    <p><input class="w3-input w3-border w3-white" type="text" name="email" placeholder="E-mail: " required></p>
+                    <p><input class="w3-input w3-border w3-white" type="password" name="senha" placeholder="Senha: " required></p>
+                </div>
+                <div class="submit">
+                    <input class="w3-btn w3-teal " type="submit" name="entrar" value="Entrar">
+                    <p><input class="w3-btn w3-teal " type="button" name="criar" value="Criar conta" onclick="abrirPagina()"></p>
+                </div>
+                <div class="registro">
+                    <p>Esqueceu a senha? <a href=''>Clique aqui.</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
